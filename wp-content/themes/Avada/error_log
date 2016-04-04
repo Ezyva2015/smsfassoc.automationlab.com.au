@@ -1,2 +1,4 @@
 [19-Dec-2015 04:51:36 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/smsfassociation/public_html/trustees.smsfassociation.com/wp-content/themes/Avada/index.php on line 1
 [18-Feb-2016 14:13:19 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/smsfassociation/public_html/trustees.smsfassociation.com/wp-content/themes/Avada/index.php on line 1
+[01-Apr-2016 11:19:21 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/tpocom/public_html/smsfassoc.automationlab.com.au/wp-content/themes/Avada/index.php on line 1
+[01-Apr-2016 11:20:17 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/tpocom/public_html/smsfassoc.automationlab.com.au/wp-content/themes/Avada/index.php on line 1

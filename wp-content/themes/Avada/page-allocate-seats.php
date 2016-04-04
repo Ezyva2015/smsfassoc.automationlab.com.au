@@ -74,7 +74,6 @@ if ( ! $infusionsoft->connect('tl270'))
 }
 
 $email = $current_user->user_email;
-echo $email;
 //2.dsQuery with the query looking in Contact table where emailAdress = that from 1. and returning contact Id
 //3.Based on the returned contact, we want to get the value of _seatsPurchased
 $returnfields = array('ID', 'Firstname', 'Lastname', '_SeatsPurchased','_SeatAllocatedBy');
@@ -87,6 +86,9 @@ $intSeatsPurchasedCount = $data[0]['_SeatsPurchased'];
 $returnFields = array('Firstname', 'Lastname', 'Email');
 $query = array('_SeatAllocatedBy' => $ID);
 $contacts = $infusionsoft->dsQuery("Contact",999,0,$query,$returnFields);
+// echo"<pre>";
+ // print_r($contacts);
+// echo"</pre>";
 
 
 if(count($contacts) > 0){
@@ -99,7 +101,6 @@ else {
 if($intSeatsPurchasedCount < 1) {
 	$intSeatsPurchasedCount = 0;
 }
-
 
 
 
@@ -133,9 +134,10 @@ For ($intLoopCounter=0;$intLoopCounter<$intSeatsPurchasedCount;$intLoopCounter++
     } else {
         // If row unallocated, make data-enterable row.
         echo "<tr>";
-        echo '<td><form name="form_'.$intLoopCounter.'" action="/ifs/Scripts/allocate_seats.php" method="post"><input name="fname" type="text" value=""></td>';
+        echo '<td><form id="JmagbutonForm" name="form_'.$intLoopCounter.'" action="/ifs/Scripts/allocate_seats.php" method="post">
+		<input name="fname" type="text" value=""></td>';
         echo '<td><input name="lname" type="text" value=""></td>';
-        echo '<td><input name="email" type="text" value=""></td>';
+        echo '<td><input name="email" type="text" value="" required></td>';
         echo '<td><input type="submit" value="Allocate Seat"></form></td>';
         echo "</tr>";
     }
@@ -186,6 +188,48 @@ else {
 		<?php wp_reset_query(); ?>
 	</div>
 	<?php do_action( 'fusion_after_content' ); ?>
+	
+	<script>
+		
+		var jm = jQuery.noConflict();
+		
+		jm(document).ready(function(){
+			
+			jm('#JmagbutonForm').submit(function(){
+				
+				var email = jm('input[name=email]').val();
+				
+
+				jm.ajax({
+						url: "../../../ifs/Scripts/check-email.php",
+						type: 'POST',
+						data: { email: email },
+						context: this,
+						success: function(result) {
+							if (result == 'success') {
+									
+								this.submit();
+								return true;
+							} else {
+								// The email is not unique => we are informing
+								// the user that the email is already in use
+								alert(result);
+								return false;
+							} 
+						}
+					});					
+				
+				return false;
+				
+			})
+			
+			
+		})
+		
+
+	</script>
+	
+	
 <?php get_footer();
 
 // Omit closing PHP tag to avoid "Headers already sent" issues.

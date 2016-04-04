@@ -35,14 +35,14 @@
 <style type="text/css">
 
 #learndash_lesson_topics_list{
-	float: right; 
+	float: left;
 	width: 29%;
 	margin-top: -47px;
 }
 
 .fplearndash-content{
 	
-	float: left; 
+	float: right;
 	width: 65%;
 	
 }
@@ -69,9 +69,6 @@
 <?php endif; ?>
 
 <?php if ( $show_content ) : ?>
-	<div class="fplearndash-content">
-	<?php echo $content; ?>
-	</div>	
 
 	<?php
     /**
@@ -81,7 +78,8 @@
 	<?php if ( ! empty( $topics ) ) : ?>
 		<div id="learndash_lesson_topics_list">
             <div id='learndash_topic_dots-<?php echo esc_attr( $post->ID ); ?>' class="learndash_topic_dots type-list">
-                <strong><?php _e( 'Knowledge Topics', 'learndash'); ?></strong>
+
+				<strong><?php _e( 'Knowledge Topics', 'learndash'); ?></strong>
                 <ul>
                     <?php $odd_class = ''; ?>
 
@@ -104,6 +102,15 @@
             </div>
 		</div>
 	<?php endif; ?>
+
+
+
+	<div class="fplearndash-content">
+		<?php echo $content; ?>
+	</div>
+
+
+
 	<?php
 	
 	
@@ -140,7 +147,7 @@
     ?>
 	<?php if ( lesson_hasassignments( $post ) ) : ?>
 		<?php $assignments = learndash_get_user_assignments( $post->ID, $user_id ); ?>
-		
+
 		<div id="learndash_uploaded_assignments">
 			<h2><?php _e( 'Files you have uploaded', 'learndash' ); ?></h2>
 			<table>
@@ -155,6 +162,7 @@
 			</table>
 		</div>
 	<?php endif; ?>
+
 
 
 	<?php

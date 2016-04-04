@@ -1,0 +1,477 @@
+/*
+Theme Name: Avada Child
+Description: Child theme for Avada theme
+Author: ThemeFusion
+Author URI: https://theme-fusion.com
+Template: Avada
+Version: 1.0.0
+Text Domain:  Avada
+*/
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 900 !important;
+}
+
+
+@font-face {
+    font-family: 'GalaxiePolaris';
+    src: url("assets/fonts/Polaris-Book.eot");
+    src: url("assets/fonts/Polaris-Book.eot") format("embedded-opentype"),
+       url('assets/fonts/Polaris-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GalaxiePolaris';
+    src: url("assets/fonts/Polaris-Medium.eot");
+    src: url("assets/fonts/Polaris-Medium.eot") format("embedded-opentype"),
+       url('assets/fonts/Polaris-Medium.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GalaxiePolaris';
+    src: url("assets/fonts/Polaris-Bold.eot");
+    src: url("assets/fonts/Polaris-Bold.eot") format("embedded-opentype"),
+       url('assets/fonts/Polaris-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GalaxiePolaris', 'PT Sans', Arial, Helvetica !important;
+font-weight: normal;
+}
+
+/*************************************************************************
+ * Double-up on icomoon fonts but these are specific to the SMSF website *
+ *************************************************************************/
+@font-face {
+    font-family: 'icomoon';
+    src:    url('assets/fonts/icomoon.eot?9vkohy');
+    src:    url('assets/fonts/icomoon.eot?9vkohy#iefix') format('embedded-opentype'),
+        url('assets/fonts/icomoon.ttf?9vkohy') format('truetype'),
+        url('assets/fonts/icomoon.woff?9vkohy') format('woff'),
+        url('assets/fonts/icomoon.svg?9vkohy#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-SMSF_Graphic_Login-43:before {
+    content: "\e900";
+}
+.icon-SMSF_Graphic_Arrow-38:before {
+    content: "\e901";
+}
+.icon-SMSF_Graphic_Facebook:before {
+    content: "\e902";
+}
+.icon-SMSF_Graphic_LinkedIn:before {
+    content: "\e903";
+}
+.icon-SMSF_Graphic_Menu-44:before {
+    content: "\e904";
+}
+.icon-SMSF_Graphic_ScrollArrow-49:before {
+    content: "\e905";
+}
+.icon-SMSF_Graphic_Search-48:before {
+    content: "\e906";
+}
+.icon-SMSF_Graphic_Twitter:before {
+    content: "\e907";
+}
+.icon-SMSF_Graphic_Youtube:before {
+    content: "\e908";
+}
+.icon-SMSF_Graphic_PlayVideo:before {
+    content: "\e909";
+}
+
+.smsf-social-media {
+    font-size: 32px;
+    color: #59a0e4;
+    margin: 0 8px;
+}
+
+.smsf-social-media:hover {
+    color: #fff;
+}
+
+/*
+ * Useful for enforcing font-weight all over the place rather then
+ * having Avada continually set it.
+ */
+
+.smsf-medium {
+    font-weight: 700 !important;
+}
+
+.smsf-bold {
+    font-weight: 900 !important;
+}
+
+.smsf-header h1,
+.smsf-header h2,
+.smsf-header h3,
+.smsf-header h4,
+.smsf-header h5,
+.smsf-header h6 {
+    font-weight: 900 !important;
+}
+
+
+
+.smsf-light-blue {
+    color: #8fc8ff;
+}
+
+
+
+.smsf-home-flipbox .flip-box-front-inner {
+    margin-top: 0 !important;
+}
+
+.smsf-home-flipbox .flip-box-back-inner {
+    margin-top: 0 !important;
+}
+
+.smsf-impact {
+    font-size: 24px !important;
+    color: #bfbfbf !important;
+    line-height: 28px !important;
+    font-weight: 900 !important;
+}
+
+.smsf-button {
+    font-family: 'GalaxiePolaris', 'PT Sans', Arial, Helvetica !important;
+    border-radius: 0 !important;
+    display: inline-block;
+    position: relative;
+    color: white !important;
+    background-color: #59a0e4 !important;
+    background-image: none !important;
+    padding: 15px 42px 13px;
+    line-height: 1.4em;
+    text-transform: none !important;
+    font-size: 0.95em !important;
+    font-weight: 900 !important;
+    border: 0px solid transparent !important;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
+
+.smsf-button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-left: 16px solid #59a0e4;
+}
+
+.smsf-button-orange {
+    background-color: #ff9000 !important;
+}
+
+.smsf-button.smsf-button-orange:after {
+    border-left-color: #ff9000 !important;
+}
+
+.smsf-button.smsf-button-orange:hover {
+    background-color: #e28000 !important;
+}
+
+.smsf-button.smsf-button-orange:hover:after {
+    border-left-color: #e28000 !important;
+}
+
+.smsf-button.smsf-inverse:hover {
+    color: #0270b8 !important;
+    background-color: #ffffff !important;
+}
+
+.smsf-button.smsf-inverse:hover:after {
+    border-left-color: #ffffff !important;
+}
+
+
+.smsf-button:hover {
+    background-color: #0270b8 !important;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
+
+.smsf-button:hover:after {
+    border-left-color: #0270b8 !important;
+}
+
+
+.smsf-home-flipbox .flip-box-heading {
+    font-weight: normal !important;
+}
+
+.smsf-home-flipbox .flip-box-heading::first-line {
+    font-weight: 900 !important;
+}
+
+.smsf-search {
+    font-weight: light;
+    font-size: 32px !important;
+    padding: 28px !important;
+}
+
+.smsf-side-menu ul {
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+}
+
+.smsf-side-menu ul > li.active {
+    list-style-image: url('/wp-content/uploads/2016/03/small-logo.png');
+}
+
+.smsf-side-menu ul > li {
+    margin-bottom: 13px;
+}
+
+.smsf-side-menu ul > li > a {
+    line-height: 15px;
+    font-size: 15px;
+    padding-left: 16px;
+    display: block;
+}
+
+.smsf-page-header {
+    /* padding-left: 68px; */
+    overflow: visible;
+}
+
+.smsf-page-header * {
+    overflow: visible !important;
+}
+
+.smsf-checkbox-padding {
+    margin-left: 38px;
+}
+
+/*
+ * The links sending the user to the next section in a group (such as the About pages)
+ */
+a.smsf-next-section {
+    color: #464646;
+    text-decoration: none;
+    line-height: 32px;
+    font-weight: 900 !important;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+a.smsf-next-section:hover {
+    color: #59a0e4;
+    text-decoration: none;
+}
+
+a.smsf-next-section i {
+    line-height: 32px;
+    font-size: 28px;
+    margin-left: 14px;
+    color: #59a0e4;
+    vertical-align: middle;
+}
+
+a.smsf-next-section:hover i {
+    margin-left: 26px;
+    -moz-transition: margin-left 0.3s linear;
+    -webkit-transition: margin-left 0.3s linear;
+    -o-transition: margin-left 0.3s linear;
+    transition: margin-left 0.3s ease-in;
+}
+
+/* Handle the size of the SVGs on the Homepage */
+.smsf-hp-image img {
+    width: 220px;
+    height: 220px;
+}
+
+.smsf-address {
+    color: white;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 19px;
+}
+
+a.smsf-footer-link {
+    color: #59a0e4 !important;
+    
+}
+
+a.smsf-footer-link:hover {
+    color: white !important;
+    /* text-decoration: underline !important; */
+}
+
+#slidingbar {
+    background-color: #252525 !important;
+}
+
+.sb-toggle-wrapper {
+    border-top-color: #252525 !important;
+}
+
+.smsf-sliding-bar {
+    padding: 30px 0 20px;
+    font-size: 20px !important;
+    line-height: 36px !important;
+    font-weight: 900 !important;
+    color: #535353 !important;
+
+}
+
+.smsf-sliding-bar a {
+    vertical-align: middle;
+    color: #5090cd !important;
+}
+
+.smsf-sliding-bar a:hover {
+    color: #fff !important;
+}
+
+.smsf-top-menu .sb-toggle, .smsf-top-menu .sb-toggle.open {
+    color: #5090cd !important;
+    font-weight: 400 !important;
+    font-size: 22px !important;
+}
+
+.sb-toggle a {
+    padding: 12px !important;
+}
+
+.sb-toggle:after, .sb-toggle.open:after {
+    content: none !important;
+}
+
+body.home .fusion-main-menu > ul > li > a {
+    color: #ffffff;
+}
+
+body.home .fusion-main-menu > ul > li > a:hover {
+    color: #59a0e4;
+}
+
+body.home .fusion-main-menu.fusion-sticky-menu > ul > li > a {
+    color: blue;
+}
+
+.menu-item a > span {
+    font-weight: 700 !important;
+}
+
+.page .menu-item a {
+    /* color: red !important; */
+}
+
+.fusion-main-menu > ul > li {
+    padding: 0 0 12px 0 !important;
+}
+
+.fusion-main-menu > ul > li > a {
+    font-size: 13px !important;
+    height: auto !important;
+    vertical-align: middle;
+    padding: 10px 20px !important;
+    line-height: normal !important;
+    min-height: 26px !important;
+    font-family: 'GalaxiePolaris', 'PT Sans', Arial, Helvetica !important;
+}
+
+.fusion-main-menu > ul > li > a:after {
+    color: transparent;
+    font-size: 26px;
+    vertical-align: middle;
+    font-family: 'icomoon';
+    content: "\e900";
+    width: 0 !important;
+    display: inline-block;
+}
+
+.fusion-main-menu  > ul > li > a:hover {
+    border-top-color: transparent !important;
+}
+
+.current-menu-item a {
+    border-top-color: transparent !important;
+}
+
+/* Membership Trial Menu */
+#menu-item-25 > a {
+    color: #ff9000;
+}
+
+.home.page #menu-item-25 > a:hover {
+    color: #ffffff;
+}
+
+.page #menu-item-25 > a:hover {
+    color: #464646;
+}
+
+/* Knowledgebase Menu */
+#menu-item-23 a {
+    border-right: rgba(255,255,255,0.15) 1px solid;
+}
+
+/* Login Menu */
+#menu-item-346 a:after {
+    color: white;
+    font-size: 26px;
+    vertical-align: middle;
+    font-family: 'icomoon';
+    content: "\e900";
+    width: auto !important;
+}
+
+#menu-item-346 span {
+    padding-right: 16px;
+}
+
+/* Menu Bars - for sliding menu */
+#menu-item-592 a:after {
+    color: white;
+    font-size: 26px;
+    vertical-align: middle;
+    font-family: 'icomoon';
+    content: "\e904";
+    width: auto !important;
+}
+#menu-item-592 span {
+    padding-right: 16px;
+}
+
